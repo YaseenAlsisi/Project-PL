@@ -42,7 +42,7 @@ public class Admin {
         }
     }
 
-    // Method to update ID
+    // to update ID
     public void updateID(String newId) {
         if (newId != null && !newId.trim().isEmpty()) {
             this.id = newId;
@@ -50,7 +50,7 @@ public class Admin {
         }
     }
 
-    // Method to update Type
+    // to update Type
     public void updateType(String newType) {
         if (newType != null && !newType.trim().isEmpty()) {
             this.type = newType;
