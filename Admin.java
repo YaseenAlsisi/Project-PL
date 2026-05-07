@@ -42,6 +42,23 @@ public class Admin {
         }
     }
 
+    // Method to update ID
+    public void updateID(String newId) {
+        if (newId != null && !newId.trim().isEmpty()) {
+            this.id = newId;
+            System.out.println("ID updated successfully!");
+        }
+    }
+
+    // Method to update Type
+    public void updateType(String newType) {
+        if (newType != null && !newType.trim().isEmpty()) {
+            this.type = newType;
+            System.out.println("Type updated successfully!");
+        }
+    }
+
+    // Display Employee added
     public static void addEmployee(String id, String user, String password, String type){
         Admin newemp = new Admin(id, user, password, type);
         employeeList.add(newemp);
@@ -74,11 +91,12 @@ public class Admin {
         System.out.println("Employee removed ");
     }
 
-    // All the display
+    // Admin Displays ID, Username, Type, and Password
     public void displayProfile() {
-        System.out.println("Admin Profile -> ID: " + id + " | User: " + username + " | Type: " + type);
+        System.out.println("Admin Profile -> ID: " + id + " | User: " + username + " | Type: " + type + " | Pass: " + password);
     }
 
+    // DISPLAY THE RUNNING (WITHOUT GUI)
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Admin admin = new Admin("123", "admin", "123456", "TopAdmin");
@@ -92,7 +110,8 @@ public class Admin {
             System.out.println("3. Search Employee by ID");
             System.out.println("4. Delete Employee by ID");
             System.out.println("5. Show Admin Profile");
-            System.out.println("6. Exit");
+            System.out.println("6. Update Admin Profile");
+            System.out.println("7. Exit");
             System.out.print("Select an option: ");
             
             int choice = input.nextInt();
@@ -124,6 +143,36 @@ public class Admin {
                     admin.displayProfile();
                     break;
                 case 6:
+                    System.out.println("\n--- Update Admin Profile ---");
+                    System.out.println("1. Update ID");
+                    System.out.println("2. Update Username");
+                    System.out.println("3. Update Type");
+                    System.out.println("4. Update Password");
+                    System.out.print("Choice: ");
+                    int subChoice = input.nextInt();
+                    input.nextLine(); 
+
+                    if (subChoice == 1) {
+                        System.out.print("Enter new Admin ID: ");
+                        admin.updateID(input.nextLine());
+                    } else if (subChoice == 2) {
+                        System.out.print("Enter new Username: ");
+                        admin.updateAccount(input.nextLine());
+                    } else if (subChoice == 3) {
+                        System.out.print("Enter new Type: ");
+                        admin.updateType(input.nextLine());
+                    } else if (subChoice == 4) {
+                        System.out.print("Enter Current Password: ");
+                        String oldP = input.nextLine();
+                        System.out.print("Enter New Password: ");
+                        String newP = input.nextLine();
+                        admin.updatePassword(oldP, newP);
+                    } else {
+                        System.out.println("Invalid Choice!");
+                    }
+                    break;
+
+                case 7:
                     exit = true;
                     System.out.println("System closed.");
                     break;
