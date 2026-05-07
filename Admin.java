@@ -91,9 +91,9 @@ public class Admin {
         System.out.println("Employee removed ");
     }
 
-    // Admin Displays ID, Username, Type, and Password
+    // Displays ID, Username, Type, and Password
     public void displayProfile() {
-        System.out.println("Admin Profile -> ID: " + id + " | User: " + username + " | Type: " + type + " | Pass: " + password);
+        System.out.println("Profile -> ID: " + id + " | User: " + username + " | Type: " + type + " | Pass: " + password);
     }
 
     // DISPLAY THE RUNNING (WITHOUT GUI)
