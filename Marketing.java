@@ -52,8 +52,8 @@ public class Marketing {
 
         while (true) {
             System.out.println("\n--- MARKETING DEPARTMENT MENU ---");
-            System.out.println("1. Create Special Offer (Part B)");
-            System.out.println("2. View Marketing Report (Part A)");
+            System.out.println("1. Create Special Offer");
+            System.out.println("2. View Marketing Report");
             System.out.println("3. Exit");
             System.out.print("Choose an option: ");
             
