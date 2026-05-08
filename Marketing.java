@@ -41,8 +41,8 @@ class Product {
 }
 
 public class Marketing {
-    private static ArrayList<Product> inventory = new ArrayList<>();
-    private static Scanner scanner = new Scanner(System.in);
+    private static ArrayList<Product> inventory = new ArrayList<>(); // to store the products in inventory
+    private static Scanner scanner = new Scanner(System.in); // System.in this for to catch the number you type and the scanner scans it
 
     public static void main(String[] args) {
         //example
